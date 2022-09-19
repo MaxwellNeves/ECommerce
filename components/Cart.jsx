@@ -36,7 +36,9 @@ const Cart = () => {
             </Link>
           </div>
         )}
-        <div className='product-container'>{cartItems.length >= 1 && cartItems.map((item) => (
+
+        <div className='product-container'>
+          {cartItems.length >= 1 && cartItems.map((item) => (
           <div className="product" key={item._id}>
             <img src={urlFor(item?.image[0])} className='cart-product-image' />
             <div className="item-desc">
@@ -50,7 +52,7 @@ const Cart = () => {
                     <spam className="minus" onClick={() => toggleCartItemQuanitity(item._id, 'dec')}><AiOutlineMinus />
                     </spam>
                     <spam className="num" onClick="">{item.quantity}</spam>
-                    <spam className="plus" onClick={() => toggleCartItemQuanitity(item._id, 'inc')}><AiOutlinePlus />
+                    <spam className="plus"  onClick={() => toggleCartItemQuanitity(item._id, 'inc')}><AiOutlinePlus />
                     </spam>
                   </p>
                 </div>
