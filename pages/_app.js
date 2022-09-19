@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
       </Layout>
     </StateContext>
 
-  );
+  )
 }
 
 export default MyApp
